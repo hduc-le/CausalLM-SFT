@@ -1,0 +1,34 @@
+# model/tokenizer
+model_name: "microsoft/phi-2"
+tokenizer_name: "microsoft/phi-2"
+gradient_checkpointing: false
+gradient_accumulation_steps: 3
+save_name: # input
+
+# dataset
+streaming: false
+num_proc: 64
+dataset_name_or_path: # input
+max_length: 1024
+batch_size: 1
+test_size: 0.05
+
+# train dynamics
+lr: 5.0e-5
+min_lr: 0
+weight_decay: 0.0
+log_lr_every: 100
+log_grads_every: 100
+eval_every: 2000
+eval_steps: 100
+save_every: 2000
+output_dir: # input
+checkpoint: null
+lora: false
+warmup_steps: 100
+num_epochs: 2
+
+# logging
+wandb: false
+wandb_project_name: # input
+seed: 42

@@ -1,0 +1,6 @@
+peft
+torchmetrics
+transformers
+accelerate
+wandb
+datasets
